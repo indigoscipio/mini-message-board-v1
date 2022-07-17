@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form(class="form" action="/new" method="POST")
+        label(for="post-title") Enter your post title...
+        input(id="post-title" type="text" name="postTitle" placeholder="Enter your text...")
+        label(for="post-body") Enter your post description...
+        textarea(id="post-body" name="postBody", cols="30", rows="10") 
+        button(class="button--submit" type="submit") Submit Post

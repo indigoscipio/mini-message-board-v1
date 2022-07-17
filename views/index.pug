@@ -1,0 +1,19 @@
+extends layout
+
+
+block content
+  div(class="container")
+
+    div(class="intro")
+      h1(class="heading")= title
+      p Welcome to #{title}
+      a(class="button button--add" href="/new") Add a new post...
+
+    ul(class="post-list")
+      each val in messages 
+        li(class="post-item")
+          p(class="post-description")= val.text
+          p(class="post-user") Posted by #{val.user} 
+          p(class="post-date")= val.added
+
+
